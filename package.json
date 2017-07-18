@@ -1,0 +1,24 @@
+{
+  "name": "bookstore-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for simple application for boost programming skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BidziS/bookstore-frontend.git"
+  },
+  "keywords": [
+    "angularJS",
+    "webpack2",
+    "es6"
+  ],
+  "author": "Daniel Cudnik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BidziS/bookstore-frontend/issues"
+  },
+  "homepage": "https://github.com/BidziS/bookstore-frontend#readme"
+}
