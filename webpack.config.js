@@ -4,7 +4,7 @@ const webpack = require('webpack');
  
 module.exports = {
     entry: {
-        app: './src/app/appModule.js'
+        app: './src/app/app.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -23,7 +23,6 @@ module.exports = {
                     }
                 }
             },
-            // { enforce: 'pre', test: /\.js$/, loader: "source-map-loader" },
             {
                 test: /\.css$/,
                 use: [ 'style-loader', 'css-loader' ]
@@ -45,23 +44,16 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [ {
-                    loader: 'html-loader',
-                    options: {
-                        minimize: false
-                    }
-                }   
+                use: [ 
+                    {
+                        loader: 'html-loader',
+                            options: {
+                                minimize: false
+                            }
+                    }   
                 ]
-            },
-                {
-                    test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
-                    loader: 'url-loader'
-                }
+            }
         ]
-    },
-    devServer: {
-      port: 3000,
-      inline: true, //allows us to run automatic live code update
     },
     plugins: [
         new HtmlWebpackPlugin({
